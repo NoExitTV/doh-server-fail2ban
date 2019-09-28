@@ -4,7 +4,7 @@ port     = 53,443,80
 action   = %(banaction)s[name=%(__name__)s-tcp, port="%(port)s", protocol="tcp", chain="%(chain)s", actname=%(banaction)s-tcp]
            %(banaction)s[name=%(__name__)s-udp, port="%(port)s", protocol="udp", chain="%(chain)s", actname=%(banaction)s-udp]
 logpath = /var/log/syslog
-findtime = 120
-maxretry = 1
+findtime = 600
+maxretry = 5
 bantime = 1800
 protocol = all
